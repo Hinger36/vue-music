@@ -3,9 +3,9 @@ import axios from 'axios';
 // import res from './resource';
 
 // 响应时间
-axios.defaults.timeout = 5 * 1000;
+// axios.defaults.timeout = 5 * 1000;
 // 配置cookie
-// axios.defaults.withCredentials = true
+axios.defaults.withCredentials = true
 // 配置请求头
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 

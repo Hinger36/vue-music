@@ -13,32 +13,40 @@
 <script>
 import { get } from '../api/api';
 
-
 export default {
   
   mounted() {
     get('personalized/newsong').then(res => {
       this.$store.commit('getNewsong', res.result)
     })
-  }
+  },
 }
 </script>
 
 <style scoped>
+#song {
+  display: flex;
+  flex-wrap: wrap;
+}
 #song .title {
-  
+  flex: 0 0 100%;
   color: #333;
   font-size: 16px;
   text-indent: 5px;
   height: 21px;
-  margin: 50px 0 10px 0;
-  border-left: 5px solid #db4c3f;
+  margin: 30px 0 10px 0;
+  border-left: 5px solid #42b983;
 }
 .box {
-  margin: 0 10px;
+  flex: 0 0 100%;
+  padding: 0 10px;
   border-bottom: 1px solid #ddd;
+  background: url('../assets/play.png') no-repeat;
+  background-size: 26px;
+  background-position: 3.3rem 0.12rem;
 }
 .song-name {
+  box-sizing: border-box;
   font-size: 16px;
   color: #333;
   height: 26px;

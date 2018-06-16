@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <!-- <iv-form></iv-form> -->
     <v-header></v-header>
-    <img-form></img-form>
-    <songlist></songlist>
+    <!-- <v-index></v-index> -->
+    <router-view></router-view>
+    <!-- <playmusic></playmusic> -->
   </div>
 </template>
 
 <script>
-// import ivForm from './components/ivForm.vue';
-import imgForm from './components/classForm.vue';
+import index from './components/index.vue';
 import header from './components/header.vue';
 import songlist from './components/songlist.vue';
-
+import play from './components/playMusic.vue';
 
 export default {
+ 
   components: {
-    // 'iv-form': ivForm,
-    'img-form': imgForm,
+    'v-index': index,
     'v-header': header,
-    'songlist': songlist
+    'songlist': songlist,
+    'playmusic': play
   },
   data () {
     return {
@@ -28,9 +28,4 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
-
 

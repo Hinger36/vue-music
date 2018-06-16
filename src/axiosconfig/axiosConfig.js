@@ -4,13 +4,13 @@ import { Message, Loading } from 'iview';
 
 
 // 响应时间
-axios.defaults.timeout = 5 * 1000
+// axios.defaults.timeout = 5 * 1000
 // 配置cookie
 // axios.defaults.withCredentials = true
 // 配置请求头
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 // 静态资源
-Vue.prototype.$static = ''
+// Vue.prototype.$static = ''
 
 // 配置接口地址
 axios.defaults.baseURL = 'http://www.bluebooo.com:4000'

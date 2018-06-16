@@ -3,12 +3,11 @@
     <div class="title">推荐歌单</div>
     <div class="box" v-for="data in this.$store.state.data" :key="data.id">
       <div class="imginfo">
-        <img :src="data.picUrl" alt="#" width="120px" style="border-radius:4px;">
+        <img :src="data.picUrl" alt="#">
         <div class="caption">
           <p class="decs" style="text-align:center">{{ data.name }}</p>
         </div>
       </div>
-      
     </div>
     
   </div>
@@ -22,7 +21,8 @@ export default {
     get('personalized?limit=6').then(res => {
       this.$store.commit('getData', res.result)
     })
-  }
+    
+  },
   
 }
 </script>
@@ -39,8 +39,8 @@ export default {
   font-size: 18px;
   text-indent: 5px;
   height: 24px;
-  margin: 50px 0 10px 0;
-  border-left: 5px solid #db4c3f;
+  margin: 85px 0 10px 0;
+  border-left: 5px solid #42b983;
 }
 #imglist .box {
   box-sizing: border-box;
@@ -50,11 +50,15 @@ export default {
   padding: 0;
 }
 .imginfo {
-  padding: 5px 0;
+  padding: 4px;
   align-self: center;
 }
+.imginfo img{
+  border-radius: 4px;
+  width: 100%;
+}
 .decs {
-  width: 120px;
+  width: 100%;
   height: 35px;
   color: #333;
   overflow: hidden;
