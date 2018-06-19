@@ -13,15 +13,12 @@ const state = {
 const mutations = {
   getData(state, payload) {
     state.data = payload;
-    console.log(payload)
   },
   getNewsong(state, payload) {
     state.newsong = payload;
-    console.log(payload)
   },
   getHotsong(state, payload) {
     state.hotsong = payload;
-    console.log(payload)
   }
 };
 
