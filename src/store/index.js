@@ -8,6 +8,7 @@ const state = {
   data: '',
   newsong: '',
   hotsong: '',
+  playsong: '',
 };
 
 const mutations = {
@@ -19,6 +20,9 @@ const mutations = {
   },
   getHotsong(state, payload) {
     state.hotsong = payload;
+  },
+  playSong(state, payload) {
+    state.playsong = payload;
   }
 };
 

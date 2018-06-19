@@ -1,7 +1,7 @@
 <template>
   <div id="song">
     <div class="title">推荐歌曲</div>
-    <div class="box" v-for="song in this.$store.state.newsong" :key="song.id">
+    <div class="box" v-for="song in this.$store.state.newsong" :key="song.id" @click="playMusic(song.id, song.song.album.picUrl)">
       <div class="song-name">{{song.name}}<span>&nbsp&nbsp{{ song.song.album.alias[0] }}</span></div>
       <p class="author">{{song.song.artists[0].name}}</p>
     </div>
@@ -20,6 +20,14 @@ export default {
       this.$store.commit('getNewsong', res.result)
     })
   },
+  methods: {
+    playMusic(id, img) {
+      get(`/music/url?id=${id}`).then(res => {
+        this.$store.commit('playSong', {data:res.data[0], Img:img})
+      })
+      this.$router.push({ path:`/play` });
+    }
+  }
 }
 </script>
 
