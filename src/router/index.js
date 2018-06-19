@@ -22,8 +22,15 @@ const routes = [
     component: App.components.playmusic
     
   },
+  {
+    path: '/hotsong',
+    name: 'hot',
+    component: App.components['hot-music']
+    
+  },
 ]
 
 export default new VueRouter({
-  routes
+  routes,
+  // linkActiveClass: "active",
 })

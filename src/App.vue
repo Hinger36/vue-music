@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <v-header></v-header>
-    <!-- <v-index></v-index> -->
     <router-view></router-view>
     <!-- <playmusic></playmusic> -->
   </div>
@@ -12,6 +11,8 @@ import index from './components/index.vue';
 import header from './components/header.vue';
 import songlist from './components/songlist.vue';
 import play from './components/playMusic.vue';
+import hotMusic from './components/hotMusic.vue';
+
 
 export default {
  
@@ -19,7 +20,8 @@ export default {
     'v-index': index,
     'v-header': header,
     'songlist': songlist,
-    'playmusic': play
+    'playmusic': play,
+    'hot-music': hotMusic
   },
   data () {
     return {

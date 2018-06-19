@@ -16,7 +16,7 @@
     <div class="option">
       <router-link to="/">
         <div class="item"><span>推荐音乐</span></div>
-      </router-link><router-link to="/song">
+      </router-link><router-link to="/hotsong">
         <div class="item"><span>热歌榜</span></div>
       </router-link><router-link to="/play">
         <div class="item"><span>搜索</span></div> 
@@ -50,7 +50,7 @@ export default {
   display: inline-block;
   width: 50px;
   height: 40px;
-  background: url(../../static/img/logs.png) no-repeat;
+  background: url('../assets/logs.png') no-repeat;
   background-size: 32px;
   background-position-y: 50% ;
   margin-left: 35px;
@@ -79,18 +79,26 @@ export default {
 .option {
   /* display: flex; */
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
 }
 .item {
   display: inline-block;
   box-sizing: border-box;
   width: 33.3%;
-  padding: 7px 0;
   text-align: center;
   color: #333;
   font-size: 14px;
 }
-
+.item span {
+  display: inline-block;
+  height: 33px;
+  line-height: 33px;
+  
+}
+.router-link-exact-active .item span{
+  color: #42b983;
+  border-bottom: 3px solid #42b983;
+}
 
 
 </style scoped>

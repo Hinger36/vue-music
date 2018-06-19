@@ -43,14 +43,14 @@ export default {
   border-bottom: 1px solid #ddd;
   background: url('../assets/play.png') no-repeat;
   background-size: 26px;
-  background-position: 3.3rem 0.12rem;
+  background-position: right 10px center;
 }
 .song-name {
   box-sizing: border-box;
   font-size: 16px;
   color: #333;
   height: 26px;
-  width: 75%;
+  max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -62,6 +62,8 @@ export default {
 }
 .author {
   font-size: 12px;
+  width: 70%;
+  overflow: hidden;
   color: #888;
   padding-bottom: 5px;
 }
