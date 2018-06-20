@@ -1,7 +1,7 @@
 <template>
   <div id="imglist">
     <div class="title">推荐歌单</div>
-    <div class="box" v-for="data in this.$store.state.data" :key="data.id">
+    <div class="box" v-for="data in this.$store.state.data" :key="data.id" @click="musicList(data.id, data.picUrl, data.name)">
       <div class="imginfo">
         <img :src="data.picUrl" alt="#">
         <div class="caption">
@@ -23,6 +23,14 @@ export default {
     })
     
   },
+  methods: {
+    musicList(id, img, name) {
+      get(`/playlist/detail?id=${id}`).then(res => {
+        this.$store.commit('getMusicsheet', {data: res.playlist.tracks, Img: img, name: name})
+      })
+      this.$router.push({ path:`/sheet`});
+    }
+  }
   
 }
 </script>

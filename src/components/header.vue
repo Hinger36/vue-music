@@ -11,16 +11,14 @@
             </svg>
         </span>
       </label>   
-      <div class="logo"></div>     
+      <div class="title">DeepMusic</div>    
     </div>
     <div class="option">
       <router-link to="/">
         <div class="item"><span>推荐音乐</span></div>
       </router-link><router-link to="/hotsong">
         <div class="item"><span>热歌榜</span></div>
-      </router-link><router-link to="/play">
-        <div class="item"><span>搜索</span></div> 
-      </router-link>
+      </router-link><div class="item"><span>搜索</span></div> 
     </div>
   </div>
 </template>
@@ -38,24 +36,10 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 3px #333;
-  /* z-index: 1000; */
 }
 .header-nav {
   height: 40px;
 }
-
-
-.header-nav .logo {
-  display: inline-block;
-  width: 50px;
-  height: 40px;
-  background: url('../assets/logs.png') no-repeat;
-  background-size: 32px;
-  background-position-y: 50% ;
-  margin-left: 35px;
-}
-
 .header-nav  .menu-icon {
   display: block;
   float: left;
@@ -75,29 +59,32 @@ export default {
 .header-nav label {
   display: none;
 }
-
-.option {
-  /* display: flex; */
-  background-color: #fff;
-  /* border-bottom: 1px solid #ddd; */
+.title {
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
 }
+
 .item {
   display: inline-block;
   box-sizing: border-box;
   width: 33.3%;
   text-align: center;
-  color: #333;
+  color: #fafafa;
   font-size: 14px;
 }
 .item span {
   display: inline-block;
-  height: 33px;
-  line-height: 33px;
+  height: 35px;
+  line-height: 35px;
   
 }
 .router-link-exact-active .item span{
-  color: #42b983;
-  border-bottom: 3px solid #42b983;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
 }
 
 

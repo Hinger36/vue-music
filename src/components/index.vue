@@ -2,6 +2,7 @@
     <div>
       <img-form></img-form>
       <songlist></songlist>
+      <router-view></router-view>
     </div>
 </template>
 

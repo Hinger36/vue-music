@@ -35,6 +35,7 @@ export default {
 #song {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 55px;
 }
 #song .title {
   flex: 0 0 100%;

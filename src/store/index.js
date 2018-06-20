@@ -8,7 +8,13 @@ const state = {
   data: '',
   newsong: '',
   hotsong: '',
-  playsong: '',
+  playsong: {
+    Img: '',
+    data: ''
+  },
+  playshow: false,
+  musicsheet: '',
+  sheetshow: true,
 };
 
 const mutations = {
@@ -23,6 +29,11 @@ const mutations = {
   },
   playSong(state, payload) {
     state.playsong = payload;
+    state.playshow = true;
+  },
+  getMusicsheet(state, payload) {
+    state.musicsheet = payload;
+    state.sheetshow = false;
   }
 };
 

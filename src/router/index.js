@@ -6,9 +6,20 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: '/index',
+  },
+  {
+    path: '/index',
     name: 'index',
-    // redirect: '/index',
     component: App.components['v-index'],
+    // children: [
+    //   {
+    //     path: 'sheet',
+    //     name: 'sheet',
+    //     component: App.components.songSheet
+    //   }
+    // ]
+    
   },
   {
     path: '/song',
@@ -28,6 +39,12 @@ const routes = [
     component: App.components['hot-music']
     
   },
+  {
+    path: '/sheet',
+    name: 'sheet',
+    component: App.components.songSheet
+  }
+
 ]
 
 export default new VueRouter({

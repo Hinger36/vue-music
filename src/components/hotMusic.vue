@@ -33,6 +33,7 @@ export default {
 #song {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 55px;
 }
 #song .hot-banner {
   flex: 0 0 100%;
