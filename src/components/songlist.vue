@@ -25,7 +25,7 @@ export default {
       get(`/music/url?id=${id}`).then(res => {
         this.$store.commit('playSong', {data:res.data[0], Img:img})
       })
-      this.$router.push({ path:`/play` });
+      // this.$router.push({ path:`/play` });
     }
   }
 }
