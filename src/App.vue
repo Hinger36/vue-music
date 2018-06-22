@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-header></v-header>
+    <v-header v-if="this.$router.history.current.query.isNative !== 1"></v-header>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -44,8 +44,7 @@ export default {
       let m = document.querySelector('#app')
       m.removeEventListener('touchend', this.firstPlay)
     }
-  },
-  
+  }
 }
 </script>
 

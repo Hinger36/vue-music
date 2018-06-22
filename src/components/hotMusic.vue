@@ -1,10 +1,13 @@
 <template>
   <div id="song">
     <div class="hot-banner">
+      <img :src="img">
     </div>
-    <div class="box" v-for="song in this.$store.state.hotsong" :key="song.id" @click="playMusic(song.id, song.al.picUrl)">
-      <div class="song-name">{{song.name}}</div>
-      <p class="author">{{song.ar[0].name}}</p>
+    <div class="container-list">
+      <div class="box" v-for="song in this.$store.state.hotsong.tracks" :key="song.id" @click="playMusic(song.id, song.al.picUrl)">
+        <div class="song-name">{{song.name}}</div>
+        <p class="author">{{song.ar[0].name}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -15,7 +18,7 @@ import { get } from '../api/api';
 export default {
   mounted() {
     get('top/list?idx=1').then(res => {
-      this.$store.commit('getHotsong', res.playlist.tracks)
+      this.$store.commit('getHotsong', res.playlist)
     })
   },
   methods: {
@@ -25,7 +28,13 @@ export default {
       })
       // this.$router.push({ path:`/play` });
     }
-  }
+  },
+  computed: {
+    img() {
+      return this.$store.state.hotsong.cover;
+    }
+
+  },
 }
 </script>
 
@@ -39,11 +48,19 @@ export default {
   flex: 0 0 100%;
   color: #333;
   font-size: 16px;
-  text-indent: 5px;
-  height: 180px;
-  background: url('../assets/gfdgdfg.png') no-repeat;
+  height: 320px;
   background-size: 100% 100%;
-  margin: 70px 0 10px 0;
+  margin: 0 0 10px 0;
+}
+#song .hot-banner img {
+  width: 100%;
+  z-index: -1;
+}
+.container-list {
+  flex: 0 0 100%;
+  background-color: #fafafa;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .box {
   flex: 0 0 100%;

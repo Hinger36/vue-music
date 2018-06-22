@@ -6,11 +6,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'index',
     redirect: '/index',
   },
   {
     path: '/index',
-    name: 'index',
+    // name: 'index',
     component: App.components['v-index'],
     // children: [
     //   {
@@ -49,5 +50,6 @@ const routes = [
 
 export default new VueRouter({
   routes,
-  // linkActiveClass: "active",
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact-active",
 })

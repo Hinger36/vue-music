@@ -28,7 +28,7 @@ export default {
       get(`/playlist/detail?id=${id}`).then(res => {
         this.$store.commit('getMusicsheet', {data: res.playlist.tracks, Img: img, name: name})
       })
-      this.$router.push({ path:`/sheet`});
+      this.$router.push({ path:`/sheet`, query:{isNative: 1}});
     }
   }
   

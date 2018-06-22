@@ -7,14 +7,15 @@ Vue.use(Vuex);
 const state = {
   data: '',
   newsong: '',
-  hotsong: '',
+  hotsong: {
+    cover: ''
+  },
   playsong: {
     Img: '',
     data: ''
   },
   playshow: false,
   musicsheet: '',
-  sheetshow: true,
 };
 
 const mutations = {
@@ -25,7 +26,8 @@ const mutations = {
     state.newsong = payload;
   },
   getHotsong(state, payload) {
-    state.hotsong = payload;
+    state.hotsong.tracks = payload.tracks;
+    state.hotsong.cover = payload.coverImgUrl;
   },
   playSong(state, payload) {
     state.playsong = payload;
@@ -33,7 +35,6 @@ const mutations = {
   },
   getMusicsheet(state, payload) {
     state.musicsheet = payload;
-    state.sheetshow = false;
   }
 };
 

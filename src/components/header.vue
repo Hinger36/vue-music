@@ -14,9 +14,9 @@
       <div class="title">DeepMusic</div>    
     </div>
     <div class="option">
-      <router-link to="/">
+      <router-link to="/index" class="tab-item">
         <div class="item"><span>推荐音乐</span></div>
-      </router-link><router-link to="/hotsong">
+      </router-link><router-link class="tab-item" to="/hotsong">
         <div class="item"><span>热歌榜</span></div>
       </router-link><div class="item"><span>搜索</span></div> 
     </div>
@@ -81,7 +81,7 @@ export default {
   line-height: 35px;
   
 }
-.router-link-exact-active .item span{
+.active .item span{
   color: #fff;
   font-weight: bold;
   border-bottom: 3px solid #fff;

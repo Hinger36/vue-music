@@ -50,7 +50,7 @@ export default {
 }
 .Audio {
   float: right;
-  padding-top: 3px;
+  padding: 3px;
 }
 
 </style scoped>

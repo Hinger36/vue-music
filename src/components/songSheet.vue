@@ -21,8 +21,13 @@ export default {
   mounted() {
     get('top/list?idx=1').then(res => {
       this.$store.commit('getHotsong', res.playlist.tracks)
+     
     })
   },
+  // created() {
+  //    let foo = this.$router.history.current.query;
+  //     console.log(foo)
+  // },
   computed: {
     img() {
       return this.$store.state.musicsheet.Img;
@@ -63,9 +68,9 @@ export default {
   position: relative;
   
 }
-.mh {
-  /* filter: blur(3px); */
-}
+/* .mh {
+  filter: blur(3px);
+} */
 .back {
   position: absolute;
   padding: 8px 20px;
