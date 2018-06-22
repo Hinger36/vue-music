@@ -60,9 +60,7 @@ export default {
   flex: 0 0 100%;
   color: #333;
   font-size: 16px;
-  /* text-indent: 5px; */
   height: 320px;
-  /* background: url('../assets/gfdgdfg.png') no-repeat; */
   background-size: 100% 100%;
   margin: 0 0 10px 0;
   position: relative;

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <v-header v-if="this.$router.history.current.query.isNative !== 1"></v-header>
-    <keep-alive>
+    <!-- <keep-alive> -->
       <router-view></router-view>
-    </keep-alive>
+    <!-- </keep-alive> -->
     <playmusic></playmusic>
   </div>
 </template>
